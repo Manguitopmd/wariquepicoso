@@ -5,7 +5,7 @@
     --texto-blanco: #ffffff;
     --rojo-vivo: #131172;
     --fondo-principal: #1d1d1d;
-    --rojo-naranja: #3643bb;
+    --rojo-naranja: #c2ff7d;
     --fondo-secundario: #f5e8c7;
     --fondo-botones: #ffb000;
     --fondo-botones-hover: #343434;
@@ -570,7 +570,7 @@ nav.bottom-nav {
 
 .category-tabs-section {
     padding: 0.75rem 0;
-    background-color: rgba(221, 34, 9, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .category-tabs {
@@ -584,7 +584,6 @@ nav.bottom-nav {
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 8px;
-    border: 1px solid var(--texto-gris);
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     white-space: nowrap;
 }
@@ -595,9 +594,8 @@ nav.bottom-nav {
 }
 
 .tab-btn.active {
-    background-color: var(--rojo-naranja); /* Más brillante */
+    background-color: var(--fondo-botones); /* Más brillante */
     color: var(--texto-blanco);
-    border-color: var(--rojo-naranja);
     font-weight: 600;
 }
 
@@ -652,10 +650,10 @@ nav.bottom-nav {
 }
 
 .item .price {
-    color: var(--rojo-naranja); /* Más vibrante */
+    color: var(--amarillo-destacado); /* Más vibrante */
     font-size: 1.3rem;
     font-weight: 700;
-    background-color: rgba(255, 48, 0, 0.2); /* Ajustado al rojo-naranja */
+    background-color: var(--fondo-navegacion); /* Ajustado al rojo-naranja */
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
 }
