@@ -1,21 +1,21 @@
 /* Paleta de colores en variables CSS (Global) */
 :root {
-    --fondo-navegacion: #0A2342;         /* Reemplaza #8d1100 (rojo oscuro) por azul oscuro */
-    --amarillo-destacado: #ff6600;       /* Reemplaza #ffb000 (amarillo) por amarillo dorado */
-    --texto-blanco: #FFFFFF;             /* Reemplaza #ffffff, se mantiene blanco */
-    --rojo-vivo: #343434;                /* Reemplaza #dd2209 (rojo vivo) por rojo intenso */
-    --fondo-principal: #123C6B;          /* Reemplaza #1d1d1d (gris oscuro) por azul medio */
-    --rojo-naranja: #e5e5e5;             /* Reemplaza #ff3000 (rojo-naranja) por naranja vibrante */
-    --fondo-secundario: #171a25;         /* Reemplaza #f5e8c7 (beige claro) por beige claro */
-    --fondo-botones: #4c6683;            /* Reemplaza #ffb000 (amarillo) por amarillo dorado */
-    --fondo-botones-hover: #3b4658;      /* Reemplaza #dd2209 (rojo) por rojo intenso */
-    --texto-negro: #cecece;              /* Reemplaza #333333 (negro) por azul oscuro */
-    --texto-gris: #ffffff;               /* Reemplaza #7f8c8d (gris) por gris claro */
+    --fondo-navegacion: #002250;
+    --amarillo-destacado: #ffd600;
+    --texto-blanco: #ffffff;
+    --rojo-vivo: #131172;
+    --fondo-principal: #1d1d1d;
+    --rojo-naranja: #3643bb;
+    --fondo-secundario: #f5e8c7;
+    --fondo-botones: #ffb000;
+    --fondo-botones-hover: #343434;
+    --texto-negro: #333333;
+    --texto-gris: #7f8c8d;
 }
 
-/* Estilos generales (usados en todas las páginas) */
+/* Estilos generales (modo oscuro) */
 body {
-    background-color: var(--fondo-secundario);
+    background-color: var(--fondo-principal);
     color: var(--texto-blanco);
     margin: 0;
     padding: 0;
@@ -38,11 +38,12 @@ body {
 .top-nav h1 {
     margin: 0;
     font-size: 1.5rem;
+    color: var(--texto-blanco); /* Más contraste */
 }
 
 main#content {
-    background-color: var(--fondo-secundario);
-    color: var(--texto-negro);
+    background-color: var(--fondo-principal);
+    color: var(--texto-blanco);
     width: 100%;
     margin: 0;
     padding: 4rem 0 5rem;
@@ -89,7 +90,7 @@ nav.bottom-nav {
 }
 
 .error-message {
-    background-color: var(--fondo-secundario);
+    background-color: #2a2a2a;
     padding: 2rem;
     margin: 2rem auto;
     max-width: 90%;
@@ -100,7 +101,7 @@ nav.bottom-nav {
 }
 
 .error-message h3 {
-    color: var(--rojo-vivo);
+    color: var(--rojo-naranja); /* Más brillante y vibrante */
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -114,7 +115,7 @@ nav.bottom-nav {
     line-height: 1.5;
 }
 
-/* Modal (usado en carta.html y contacto.html) */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -122,14 +123,14 @@ nav.bottom-nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--fondo-principal);
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
     z-index: 2000;
 }
 
 .modal-content {
-    background-color: var(--rojo-vivo);
+    background-color: #2a2a2a;
     border-radius: 12px;
     max-width: 90%;
     width: 100%;
@@ -149,15 +150,15 @@ nav.bottom-nav {
 }
 
 .modal-body h3 {
-    color: var(--amarillo-destacado);
+    color: var(--amarillo-destacado); /* Más contraste y calidez */
     font-size: 1.8rem;
     font-weight: 700;
     margin: 0.5rem 0;
 }
 
 .modal-body .price {
-    color: var(--texto-negro);
-    background-color: var(--rojo-vivo);
+    color: var(--texto-blanco);
+    background-color: var(--rojo-naranja); /* Más vibrante */
     font-size: 1.4rem;
     font-weight: 700;
     padding: 0.3rem 0.8rem;
@@ -167,7 +168,7 @@ nav.bottom-nav {
 }
 
 .modal-body p {
-    color: var(--texto-negro);
+    color: var(--texto-gris);
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0.5rem 0;
@@ -190,10 +191,9 @@ nav.bottom-nav {
     transform: scale(1.05);
 }
 
-/* Estilo específico para el botón de cerrar del modal (carta.html) */
 .modal-close-btn {
     background-color: var(--texto-gris);
-    color: var(--fondo-navegacion);
+    color: var(--texto-blanco);
     padding: 0.5rem;
     border-radius: 50%;
     font-size: 1rem;
@@ -208,11 +208,11 @@ nav.bottom-nav {
 }
 
 .modal-close-btn:hover {
-    background-color: var(--rojo-vivo);
+    background-color: var(--rojo-naranja); /* Más vibrante */
     transform: scale(1.1);
 }
 
-/* Estilos específicos para el modal de confirmación (contacto.html) */
+/* Modal de confirmación */
 #modal-content {
     padding: 1.5rem;
     text-align: center;
@@ -220,7 +220,7 @@ nav.bottom-nav {
 }
 
 #modal-content h3 {
-    color: var(--rojo-vivo);
+    color: var(--amarillo-destacado); /* Más contraste */
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0 0 1rem;
@@ -229,7 +229,7 @@ nav.bottom-nav {
 }
 
 #modal-message {
-    color: var(--texto-negro);
+    color: var(--texto-gris);
     font-size: 1.1rem;
     line-height: 1.5;
     margin: 0 0 1.5rem;
@@ -270,7 +270,7 @@ nav.bottom-nav {
     transform: scale(1.05);
 }
 
-/* Estilos para index.html (inicio.html) */
+/* Estilos para index.html */
 .slider {
     width: 100%;
     height: 200px;
@@ -304,7 +304,7 @@ nav.bottom-nav {
 }
 
 .section-title {
-    color: var(--texto-gris);
+    color: var(--amarillo-destacado); /* Más contraste */
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -312,7 +312,7 @@ nav.bottom-nav {
 
 .schedule-highlight {
     position: relative;
-    background-color: rgba(255, 176, 0, 0.1);
+    background-color: rgba(255, 176, 0, 0.15);
     border: 2px dashed var(--amarillo-destacado);
     border-radius: 8px;
     padding: 1.5rem 1rem 1rem;
@@ -321,13 +321,13 @@ nav.bottom-nav {
 }
 
 .schedule-icon {
-    color: var(--texto-gris);
+    color: var(--rojo-naranja); /* Más vibrante */
     font-size: 2rem;
     position: absolute;
     top: -1.5rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--fondo-secundario);
+    background-color: var(--fondo-principal);
     padding: 0.5rem;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -339,7 +339,7 @@ nav.bottom-nav {
 }
 
 .schedule-text {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.2rem;
     font-weight: 500;
     margin: 0;
@@ -360,9 +360,9 @@ nav.bottom-nav {
     justify-content: center;
     width: 48px;
     height: 48px;
-    background-color: var(--texto-blanco);
+    background-color: #2a2a2a;
     border-radius: 50%;
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.5rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -370,7 +370,7 @@ nav.bottom-nav {
 
 .social-btn:hover {
     background-color: var(--amarillo-destacado);
-    color: var(--texto-blanco);
+    color: var(--texto-negro);
     transform: scale(1.1);
 }
 
@@ -406,7 +406,7 @@ nav.bottom-nav {
 }
 
 .call-btn:hover {
-    background-color: var(3b4658);
+    background-color: var(--rojo-naranja);
 }
 
 .whatsapp-btn {
@@ -452,17 +452,16 @@ nav.bottom-nav {
 .about-section {
     padding: 1.5rem;
     text-align: center;
-    background-color: rgba(221, 34, 9, 0.05);
+    background-color: rgba(221, 34, 9, 0.1);
     border-radius: 10px;
     margin: 0 1rem 2rem;
 }
 
 .about-text {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-top: 1rem;
-    text-align: justify;
 }
 
 /* Estilos para contacto.html */
@@ -472,7 +471,7 @@ nav.bottom-nav {
 }
 
 .contact-address {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
@@ -535,7 +534,7 @@ nav.bottom-nav {
 }
 
 .form-group label {
-    color: var(--texto-negro);
+    color: var(--texto-blanco);
     font-weight: 600;
     display: block;
     margin-bottom: 0.5rem;
@@ -547,7 +546,8 @@ nav.bottom-nav {
     border: 2px solid var(--texto-gris);
     border-radius: 8px;
     font-size: 1rem;
-    background-color: var(--texto-blanco);
+    background-color: #2a2a2a;
+    color: var(--texto-blanco);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -570,7 +570,7 @@ nav.bottom-nav {
 
 .category-tabs-section {
     padding: 0.75rem 0;
-    background-color: rgba(221, 34, 9, 0.05);
+    background-color: rgba(221, 34, 9, 0.1);
 }
 
 .category-tabs {
@@ -578,25 +578,26 @@ nav.bottom-nav {
 }
 
 .tab-btn {
-    background-color: var(--amarillo-destacado);
-    color: var(--texto-negro);
+    background-color: #2a2a2a;
+    color: var(--texto-blanco);
     padding: 0.75rem 1.25rem;
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 8px;
+    border: 1px solid var(--texto-gris);
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     white-space: nowrap;
 }
 
 .tab-btn:hover {
     background-color: rgba(255, 176, 0, 0.2);
-    color: var(--rojo-vivo);
+    color: var(--rojo-naranja); /* Más vibrante */
 }
 
 .tab-btn.active {
-    background-color: var(--rojo-vivo);
+    background-color: var(--rojo-naranja); /* Más brillante */
     color: var(--texto-blanco);
-    border-color: var(--rojo-vivo);
+    border-color: var(--rojo-naranja);
     font-weight: 600;
 }
 
@@ -609,7 +610,7 @@ nav.bottom-nav {
 }
 
 .category-title {
-    color: var(--texto-blanco);
+    color: var(--amarillo-destacado); /* Más contraste */
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -622,7 +623,7 @@ nav.bottom-nav {
 }
 
 .item {
-    background-color: var(--fondo-navegacion);
+    background-color: #2a2a2a;
     border-radius: 8px;
     padding: 0.75rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -651,16 +652,16 @@ nav.bottom-nav {
 }
 
 .item .price {
-    color: var(--texto-blanco);
+    color: var(--rojo-naranja); /* Más vibrante */
     font-size: 1.3rem;
     font-weight: 700;
-    background-color: var(--amarillo-destacado);
+    background-color: rgba(255, 48, 0, 0.2); /* Ajustado al rojo-naranja */
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
 }
 
 .details-btn {
-    background-color: var(--fondo-botones);
+    background-color: var(--amarillo-destacado);
     color: var(--texto-negro);
     padding: 0.4rem 0.8rem;
     border-radius: 6px;

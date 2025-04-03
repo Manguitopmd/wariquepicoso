@@ -128,7 +128,7 @@ function initMap() {
             attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         L.marker([-4.586632, -81.266811]).addTo(map)
-            .bindPopup('Warique Picoso')
+            .bindPopup('Restaurant Soledad')
             .openPopup();
         mapElement.setAttribute('data-initialized', 'true');
     }
@@ -183,7 +183,7 @@ function initReserveForm() {
 
             modalConfirm.onclick = () => {
                 const message = `Nueva reserva:\nNombre: ${name}\nFecha: ${date}\nHora: ${time}\nPersonas: ${people}`;
-                const whatsappUrl = `https://wa.me/51945285529?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/51930288404?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
                 modal.style.display = 'none';
                 form.reset();
