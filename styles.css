@@ -158,7 +158,7 @@ nav.bottom-nav {
 
 .modal-body .price {
     color: var(--texto-blanco);
-    background-color: var(--rojo-naranja); /* Más vibrante */
+    background-color: var(--fondo-botones); /* Más vibrante */
     font-size: 1.4rem;
     font-weight: 700;
     padding: 0.3rem 0.8rem;
@@ -452,7 +452,7 @@ nav.bottom-nav {
 .about-section {
     padding: 1.5rem;
     text-align: center;
-    background-color: rgba(221, 34, 9, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 0 1rem 2rem;
 }
